@@ -11,5 +11,5 @@ Covid-19 #evdeyimcidden günlerinin hatırası -- Nisan 2020
 * [23. Lettres et passeports](ders/23.md)
 * [24. La toilette de M. Vincent](ders/24.md)
 * [25. Le départ](ders/25.md)
-* [](ders/26.md)
+* [Révision: Leçons 20 à 25](dialog/20-25.md)
 * []()
