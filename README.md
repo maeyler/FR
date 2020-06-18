@@ -27,7 +27,6 @@ Covid-19 #evdeyimcidden günlerinin hatırası -- Nisan 2020
 * [14. Les mesures](ders/14.md)
 * [Révision: Leçons 11 à 14](dialog/11-14.md)
 <br><br>
-<br>
 * [15. La maison de M. Vincent](ders/15.md)
 * [16. La famille Vincent](ders/16.md)
 * [17. Le salon - la salle à manger](ders/17.md)
