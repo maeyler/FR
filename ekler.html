@@ -6,22 +6,19 @@
     <meta name="author"      content="M A Eyler, Istanbul, 2020" />
     <link rel="icon" sizes="192x192" href="/JS/images/JS.png">
     <link href="/JS/api/play_list.css" rel="stylesheet" media="all">
+    <style>
+        li a {
+          margin: 8px;
+          display: inline-block;
+        }
+    </style>
+
     <title>Video Ekleri </title>
 </head>
 
 <body>
 
 <h2 id=title></h2>
-<!-- <div>
-  <textarea id=data rows=12 cols=64></textarea><br>
-  Open Dev Tools on YouTube playlist page and do the following:
-  <pre>[...document.querySelectorAll('ytd-playlist-video-renderer')].map(x => 
-x.querySelector('[title]').title+'\t'+
-x.querySelector('[href]').href.substring(32,43)).reverse().join('\n')</pre>
-  copy the result (without quotes), paste above, and then press 
-  <button id=useDat>Use</button>
-  <br>&emsp;
-</div> -->
 <iframe id=player frameborder="0" allowfullscreen
   allow="accelerometer; encrypted-media; gyroscope; picture-in-picture">
 </iframe>
@@ -29,10 +26,16 @@ x.querySelector('[href]').href.substring(32,43)).reverse().join('\n')</pre>
 <div id=liste>
 </div>
 <hr />
-<p>
-<a href="https://www.youtube.com/playlist?list=PLBDiqooDrrusEA_2qV3HiyulESxXZyNcd">
-    YouTube playlist</a> 
+<p>YouTube <a target="_blank"
+    href="https://www.youtube.com/playlist?list=PLBDiqooDrrusEA_2qV3HiyulESxXZyNcd">
+    playlist</a> 
 </p>
+</p>
+<p style='font-weight:bolder'>
+    <a href='takdim.html' title='Önceki sayfa'>⇦</a>&emsp;
+    <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
+    <a href='alfabe.html' title='Sonraki sayfa'>⇨</a>&emsp;
+    
 <script>
 "use strict";
 const DATA = 
@@ -81,7 +84,9 @@ function useData() {
         let t = document.createElement('li')
         let i = document.createElement('img')
         i.src = IMG1+link+IMG2; t.append(i)
-        let a = document.createElement('span')
+        let a = document.createElement('a')
+        let [num, rest] = topic.split('. ')
+        a.href = (rest? 'ders/'+num : 'alfabe')+'.html'
         a.innerText = topic; t.append(a)
         t.ref = HREF+link; liste.append(t)
     }

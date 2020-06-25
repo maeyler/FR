@@ -9,26 +9,40 @@
     <style>
       body {
         font: 14px sans-serif;
-        background-color: #ffa;
+        background: #bef;
       }
       div {
         display: inline-block;
         vertical-align: top;
-        width: 270px;
+        width: 260px;
         margin: 8px;
+        border-radius: 8px;
+        background: #ffa;
       }
       ul { margin: 6px; padding: 0; }
-      li { margin: 6px; }
+      li { 
+        margin: 6px; 
+        display: block;
+        list-style-type: none;
+        padding: 10px;
+        background: blue;
+        border-radius: 16px;
+      }
+      li a { 
+        color: #ffa;
+        text-decoration: none;
+        font-weight: bold;
+      }
     </style>
     </head>
   <body>
 <h2>Cours de Français</h2>
 
-<div>
-  <a href="takdim.html">Préface -- Takdim</a><br><br>
-  <a href="ekler.html">Play list -- Video Ekleri</a><br><br>
-  <a href="alfabe.html">Alphabet -- Alfabe</a>
-</div>
+<div><ul>
+  <li><a href="takdim.html">Préface -- Takdim</a></li>
+  <li><a href="ekler.html">Play list -- Video Ekleri</a></li>
+  <li><a href="alfabe.html">Alphabet -- Alfabe</a></li>
+</ul></div>
 <div><ul>
   <li><a href="ders/01.html">01. Qu’est-ce que c’est?</a></li>
   <li><a href="ders/02.html">02. Un, une, des</a></li>

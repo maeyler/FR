@@ -11,7 +11,7 @@ Her derse dışarıdan ilgili [bir video](ekler.html) ekleyerek sayfalarımıza 
 <p style='font-weight:bolder'>
   <a>⇦</a>&emsp;
   <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
-  <a href='alfabe.html' title='Sonraki sayfa'>⇨</a>
+  <a href='ekler.html' title='Sonraki sayfa'>⇨</a>
 </p>
 
 [Mavi Kitap](https://www.academia.edu/35338057/Gaston_Mauger_Cours_De_Langue_Et_De_Civilisation_Francaise_I._I_Hachette_I_Hachette)
