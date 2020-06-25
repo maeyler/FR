@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <link rel="icon" sizes="192x192" href="/JS/images/JS.png">
+    <link href="/JS/api/play_list.css" rel="stylesheet" media="all">
+    <title>Video Ekleri </title>
+</head>
+
+<body>
+
+<h2 id=title></h2>
+<!-- <div>
+  <textarea id=data rows=12 cols=64></textarea><br>
+  Open Dev Tools on YouTube playlist page and do the following:
+  <pre>[...document.querySelectorAll('ytd-playlist-video-renderer')].map(x => 
+x.querySelector('[title]').title+'\t'+
+x.querySelector('[href]').href.substring(32,43)).reverse().join('\n')</pre>
+  copy the result (without quotes), paste above, and then press 
+  <button id=useDat>Use</button>
+  <br>&emsp;
+</div> -->
+<iframe id=player frameborder="0" allowfullscreen
+  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture">
+</iframe>
+<hr />
+<div id=liste>
+</div>
+<hr />
+<p>
+<a href="https://www.youtube.com/playlist?list=PLBDiqooDrrusEA_2qV3HiyulESxXZyNcd">
+    YouTube playlist</a> 
+</p>
+<script>
+"use strict";
+const DATA = 
+`Alphabet	8WnTgEzcqaw
+01. Qu’est-ce que c’est?	jplbnk35sKo
+02. Un, une, des	lsc3qLMaCu8
+03. Le, la, les	npniUd2M_vI
+04. Les couleurs	J_O424Z8vQs
+05. Le verbe ÊTRE	HYc5Gde7X0E
+06. Il y a - Y a-t-il?	CUAsT_mI5TY
+07. La matière des objets	d1LHX07827Q
+08. Le corps	lOeC1oeXzk0
+09. La tête	aUMNUKlpJVk
+10. Notre, votre, leur	w2dOe4Ri1r4
+11. Du, des. L’heure	pvfPWbogCfg
+12. Le jour, le mois, l’année	7_u2SigckNQ
+13. Les saisons	n7XeCj_uvns
+14. Les mesures	s3Zopei3Cy4
+15. La maison de M. Vincent	axyHbrI2D4k
+16. La famille Vincent	maeCZYkc0K4
+17. Le salon - la salle à manger	3kPauywL2g0
+18. Les chambres, la salle de bains	7ZotmBF-5Xg
+19. Le repas	DtLkAwHUFQI
+20. Une grande nouvelle	rYCSUvxV5DE
+21. Les vêtements d’homme	z0Frm7TthkM
+22. Les vêtements de femme	D4ktRrWUzCw
+23. Lettres et passeports	LwzcSIVTCls
+24. La toilette de M. Vincent	XUDnRAr7Hms
+25. Le départ	e60FU8JwXPo
+26. La famille débarque au Havre	MDTmjXcF_zU`
+
+function doClick(evt) {
+    let t = evt.target
+    let h = t.ref || t.parentNode.ref
+    console.log(t.tagName, h)
+    if (h) player.src = h
+}
+function useData() {
+    const IMG1 = 'https://img.youtube.com/vi/'
+    const IMG2 = '/0.jpg' //mqdefault is smaller
+    //https://boingboing.net/features/getthumbs
+    const HREF = 'https://www.youtube.com/embed/'
+    liste.innerText = '' //clear list
+    for (let s of DATA.split('\n')) {
+        let [topic, link] = s.split('\t')
+        let t = document.createElement('li')
+        let i = document.createElement('img')
+        i.src = IMG1+link+IMG2; t.append(i)
+        let a = document.createElement('span')
+        a.innerText = topic; t.append(a)
+        t.ref = HREF+link; liste.append(t)
+    }
+    player.src = liste.querySelector('li').ref
+}
+    title.innerText = document.title
+    liste.onclick = doClick
+    // useDat.onclick= useData
+    // data.value = DATA
+    useData()
+</script>
+
+</body>
+</html>
