@@ -14,4 +14,6 @@ Her derse dışarıdan ilgili [bir video](ekler.html) ekleyerek sayfalarımıza 
   <a href='ekler.html' title='Sonraki sayfa'>⇨</a>
 </p>
 
+<hr>
+![mavi_kitap](mavi_kitap.JPG)<br>
 [Mavi Kitap](https://www.academia.edu/35338057/Gaston_Mauger_Cours_De_Langue_Et_De_Civilisation_Francaise_I._I_Hachette_I_Hachette)
