@@ -11,6 +11,7 @@
           margin: 8px;
           display: inline-block;
         }
+        #nav a { cursor: pointer; }
     </style>
 
     <title>Video Ekleri </title>
@@ -22,6 +23,13 @@
 <iframe id=player frameborder="0" allowfullscreen
   allow="accelerometer; encrypted-media; gyroscope; picture-in-picture">
 </iframe>
+&emsp;
+<div id=nav style='font-weight:bolder'>
+    Önceki ve sonraki videolar: &emsp;
+    <a onclick="prevPage()" title='Önceki video'>⇦</a>&emsp;
+    <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
+    <a onclick="nextPage()" title='Sonraki video'>⇨</a>&emsp;
+</div>
 <hr />
 <div id=liste>
 </div>
@@ -30,11 +38,11 @@
     href="https://www.youtube.com/playlist?list=PLBDiqooDrrusEA_2qV3HiyulESxXZyNcd">
     playlist</a> 
 </p>
-</p>
 <p style='font-weight:bolder'>
     <a href='takdim.html' title='Önceki sayfa'>⇦</a>&emsp;
     <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
     <a href='alfabe.html' title='Sonraki sayfa'>⇨</a>&emsp;
+</p>
     
 <script>
 "use strict";
@@ -51,8 +59,8 @@ const DATA =
 09. La tête	aUMNUKlpJVk
 10. Notre, votre, leur	w2dOe4Ri1r4
 11. Du, des. L’heure	pvfPWbogCfg
-12. Le jour, le mois, l’année	7_u2SigckNQ
 12. Le jour, le mois, l’année	BiHYehk0tYo
+12. Le jour, le mois, l’année	7_u2SigckNQ
 13. Les saisons	n7XeCj_uvns
 14. Les mesures	s3Zopei3Cy4
 15. La maison de M. Vincent	axyHbrI2D4k
@@ -74,15 +82,23 @@ const DATA =
 
 function doClick(evt) {
     let t = evt.target
-    let h = t.ref || t.parentNode.ref
-    console.log(t.tagName, h)
-    if (h) player.src = h
+    setCurrent(t.ref? t : t.parentNode)
+}
+function prevPage() {
+    setCurrent(current.previousElementSibling || liste.lastElementChild)
+}
+function nextPage() {
+    setCurrent(current.nextElementSibling || liste.firstElementChild)
+}
+function setCurrent(i) {
+    if (!i) return
+    const HREF = 'https://www.youtube.com/embed/'
+    current = i; player.src = HREF + i.ref
 }
 function useData() {
     const IMG1 = 'https://img.youtube.com/vi/'
     const IMG2 = '/0.jpg' //mqdefault is smaller
     //https://boingboing.net/features/getthumbs
-    const HREF = 'https://www.youtube.com/embed/'
     liste.innerText = '' //clear list
     for (let s of DATA.split('\n')) {
         let [topic, link] = s.split('\t')
@@ -93,14 +109,13 @@ function useData() {
         let [num, rest] = topic.split('. ')
         a.href = (rest? 'ders/'+num : 'alfabe')+'.html'
         a.innerText = topic; t.append(a)
-        t.ref = HREF+link; liste.append(t)
+        t.ref = link; liste.append(t)
     }
-    player.src = liste.querySelector('li').ref
+    setCurrent(liste.querySelector('li'))
 }
+    var current  //list item
     title.innerText = document.title
     liste.onclick = doClick
-    // useDat.onclick= useData
-    // data.value = DATA
     useData()
 </script>
 
