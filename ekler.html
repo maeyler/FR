@@ -34,14 +34,15 @@
 <div id=liste>
 </div>
 <hr />
-<p>YouTube <a target="_blank"
-    href="https://www.youtube.com/playlist?list=PLBDiqooDrrusEA_2qV3HiyulESxXZyNcd">
-    playlist</a> 
-</p>
-<p style='font-weight:bolder'>
+<p>
+  <b>
     <a href='takdim.html' title='Önceki sayfa'>⇦</a>&emsp;
     <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
     <a href='alfabe.html' title='Sonraki sayfa'>⇨</a>&emsp;
+  </b>
+  &emsp; YouTube <a target="_blank"
+  href="https://www.youtube.com/playlist?list=PLBDiqooDrrusEA_2qV3HiyulESxXZyNcd">
+    playlist</a> 
 </p>
     
 <script>
@@ -110,6 +111,7 @@ function setCurrent(i) {
     if (!i) return
     const HREF = 'https://www.youtube.com/embed/'
     current = i; player.src = HREF + i.ref
+    player.scrollIntoView()
 }
 function useData() {
     const IMG1 = 'https://img.youtube.com/vi/'
