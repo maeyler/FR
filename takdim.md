@@ -6,12 +6,14 @@ Geçen bunca zaman içinde daha iyi yöntemler kullanan, daha güzel kitaplar ç
 
 İlk derslerde sadece ses kaydı kullandık. Sonra 22. derse kadar videolar ekledik ilgili [YouTube kanalına](/JS/api/YouTube.html#PLBDiqooDrrusEA_2qV3HiyulESxXZyNcd). Mayıs ayında projeye tekrar döndüğümüzde kitap sayfalarını da web ortamına taşıdık, böylece açıklamalarda video kaydına gerek kalmadığı için yine ses dosyalarına döndük.
 
-Her derse dışarıdan ilgili [bir video](ekler.html) ekleyerek sayfalarımıza renk ve zenginlik kattık. İki sayfalık bir dersi her gün soruları ile birlikte çalışan ciddi bir öğrenci, üç ay içinde konuşacak kadar Fransızca öğrenecektir bu sayfalardan...
+Bütün gramer özetlerini iki sayfada toplayarak öğrencinin gramer bahislerini hızla gözden geçirmesini sağladık. Her derse dışarıdan ilgili [bir video](ekler.html) ekleyerek sayfalarımıza renk ve zenginlik kattık. İlk videolar ana okulu seviyesinde başlıyor, sonrakiler hızla günlük diyaloglara geçiyor.
+
+İki sayfalık bir dersi her gün soruları ile birlikte çalışan ciddi bir öğrenci, üç ay içinde konuşacak kadar Fransızca öğrenecektir bu sayfalardan...
 
 <p style='font-weight:bolder'>
   <a>⇦</a>&emsp;
   <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
-  <a href='ekler.html' title='Sonraki sayfa'>⇨</a>
+  <a href='alfabe.html' title='Sonraki sayfa'>⇨</a>
 </p>
 
 <hr>

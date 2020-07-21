@@ -1,4 +1,4 @@
-## Grammaire
+## Grammaire: Leçons 40 à 65
 
 <audio controls>
   <source src="ders/sound/40A.ogg"></source>
@@ -111,7 +111,7 @@
 ![65](gram/65.JPG)
 
 <p style='font-weight:bolder'>
-  <a href='alfabe.html' title='Önceki sayfa'>⇦</a>&emsp;
+  <a href='gram1.html' title='Önceki sayfa'>⇦</a>&emsp;
   <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
   <a href='ekler.html' title='Sonraki sayfa'>⇨</a>
 </p>

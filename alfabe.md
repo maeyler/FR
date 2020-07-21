@@ -7,7 +7,7 @@
 ![01B](dialog/img/phonetique.JPG)
 
 <p style='font-weight:bolder'>
-  <a href='ekler.html' title='Önceki sayfa'>⇦</a>&emsp;
+  <a href='takdim.html' title='Önceki sayfa'>⇦</a>&emsp;
   <a href='index.html' title='Ana sayfa'>⇧</a>&emsp;
-  <a href='ders/01.html' title='Sonraki sayfa'>⇨</a>
+  <a href='gram1.html' title='Sonraki sayfa'>⇨</a>
 </p>
